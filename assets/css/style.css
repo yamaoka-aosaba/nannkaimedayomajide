@@ -10,22 +10,18 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
-  overflow-x: hidden;
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  font-size: 18px;
-  line-height: 1.77778;
-  font-weight: bold;
-  text-decoration: none;
-  border: none;
-  list-style: none;
-  color: #000;
-  margin: 0;
+    font-family:"Times New Roman","ヒラギノ明朝 ProN",serif;
+    font-weight:bold;
+    background-color:#fff2e7;
+    color:#000000;
+    margin:0%;
+    line-height:30px;
 }
 
 img {
@@ -78,10 +74,19 @@ button {
   display: block;
   border: none;
   margin: 0 auto;
-  background-color: #006837;
+  background-color: #af0000;
   color: #fff;
   width: 287px;
   height: 55px;
+}
+
+h1{
+   text-align:center;
+   margin: 0 auto;
+}
+
+h6{
+  margin:0 5px;
 }
 
 /*******************
@@ -117,10 +122,10 @@ button {
 }
 
 .container {
-  width: 1100px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
+   width:auto;
+   padding-right:100px;
+   padding-left:100px;
+   margin: 0 auto;
 }
 
 @media screen and (max-width: 1100px) {
@@ -128,6 +133,8 @@ button {
     width: calc(100% - 40px);
   }
 }
+
+
 
 .row {
   display: -webkit-box;
@@ -145,6 +152,45 @@ button {
 .column {
   width: 100%;
 }
+
+
+
+.notes2{
+  background-color:#dcbcbc;
+}
+
+.card2{
+  background-color:#fff;
+  margin:10px;
+  height:auto;
+  width:90%;
+}
+
+.card2-title{
+  font-size:18px;
+  text-align:center;
+  margin:0;
+  padding:20px 30px;
+  cursor:pointer;
+}
+
+.card2-title::after{
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #793535;
+}
+
+.card2-content{
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 16px;
+  padding: 20px 30px;
+  margin: 0;
+}
+
+
 
 .card {
   background-color: #fff;
@@ -180,6 +226,16 @@ button {
   top: -10px;
   left: 30px;
 }
+
+
+
+.question{
+  background-color: #ffffff;
+  padding: 10px 0;
+  margin: 20px;
+}
+
+
 
 .hint-page .card {
   height: auto;
@@ -247,14 +303,14 @@ button {
 }
 
 .bg-color--gray {
-  background-color: #e6e6e6;
+  background-color: #bfbfbf;
 }
 
 /*********************
 * title
 **********************/
 .main-title {
-  margin: 0;
+  margin: 50px 0 0 0;
 }
 
 .sub-title {
@@ -336,7 +392,7 @@ button {
   display: block;
   text-decoration: none;
   cursor: pointer;
-  background-color: #006837;
+  background-color: #af0000;
   color: #fff;
   font-size: 24px;
   line-height: 1.54167;
@@ -365,8 +421,15 @@ button {
 * header
 *****************/
 .header {
-  background-color: #fff;
-  height: 60px;
+    position:fixed;
+    top:0;
+    left:0;
+    height:50px;
+    width:100%;
+    background-color:#bfbfbf;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .header .container {
@@ -407,21 +470,60 @@ button {
 /********************
 * main
 ********************/
-.story__note {
-  margin: 0;
+
+.head-border{
+    color:#666;
+    display:flex;
+    align-items:center;
 }
 
-.story__note__outer {
-  width: 860px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px;
-  margin: 20px auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.head-border:before,
+.head-border:after{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    background-color:#666;
 }
+
+.head-border:before{
+    margin-right: 45px;
+}
+
+.head-border:after{
+    margin-left:45px;
+}
+
+
+
+.flex-notes{
+    display:flex;
+    -ms-flex-direction:row;
+}
+
+.card1 {
+    background-color:#fff;
+    margin:10px;
+    width:90%;
+}
+
+.card1-title {
+    text-align:center;
+    padding:10px;
+}
+
+.card1-title:after{
+    display:block;
+    content:"";
+    width:100%;
+    height:3px;
+    background-color:black;
+}
+
+.card1-text{
+    text-align:center;
+}
+
+
 
 @media screen and (max-width: 940px) {
   .story__note__outer {
